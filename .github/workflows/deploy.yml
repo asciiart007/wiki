@@ -23,12 +23,12 @@ jobs:
           path: wiki
       - name: Print working directory
         run: echo  $(pwd)
-      - name: 切换到 wiki 目录
-        run: |
-          cd wiki
+      # - name: 切换到 wiki 目录
+      #   run: |
+      #     cd wiki
       - name: Check for package.json
         run: |
-          if [ ! -f "wiki/package.json" ]; then
+          if [ ! -f "package.json" ]; then
             echo "package.json not found"
             exit 1
           fi
