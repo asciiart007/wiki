@@ -29,6 +29,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
               with:
+                  path: wiki
                   fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
             # - name: Specify working directory
             #   run: cd wiki  # 切换到 wiki 目录录
@@ -49,7 +50,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with: #  路径配置 默认为 ./.vitepress/dist
-                path: wiki/.vitepress/dist
+                path: .vitepress/dist
 
     # 部署工作
     deploy:
