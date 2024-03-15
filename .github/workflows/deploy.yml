@@ -32,8 +32,10 @@ jobs:
                   fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
             - name: Specify working directory
               run: cd wiki  # 切换到 wiki 目录录
-            - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
-            # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+
+            - name: 安装 PNPM
+              uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
+                # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
             - name: Setup Node
               uses: actions/setup-node@v4
               with:
