@@ -30,8 +30,9 @@ jobs:
               uses: actions/checkout@v4
               with:
                   fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-                  # path: wiki
-
+                  path: wiki
+            - name: Print working directory
+              run: echo "Current directory: $(pwd)"
             - name: 切换到 wiki 目录
               run: |
                 cd wiki
