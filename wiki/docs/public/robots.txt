@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /private/
+Disallow: /secret/
+
+User-agent: Googlebot
+Disallow:
+
+User-agent: Baiduspider
+Disallow: /

@@ -1,0 +1,5 @@
+# 忽略所有 Markdown 文件
+*.md
+
+# 忽略特定文件夹中的所有 Markdown 文件
+docs/**/*.md

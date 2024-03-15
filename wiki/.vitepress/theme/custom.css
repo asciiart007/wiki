@@ -1,0 +1,9 @@
+:root {
+    --vp-c-brand: #646cff;
+    --vp-c-brand-light: #747bff;
+}
+
+.custom-page-class {
+    /* 特定页面的样式 */
+    background: #000;
+}
