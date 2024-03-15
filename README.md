@@ -18,10 +18,11 @@ api:https://vitepress.dev/zh/reference/site-config
 
 npm i -g vercel
 
-To quickly start a new project, run the following commands:
-vercel init     # Pick an example project
-cd <PROJECT>    # Change directory to the new project
-vercel          # Deploy to the cloud
+  To quickly start a new project, run the following commands:
+
+  vercel init     # Pick an example project
+  cd <PROJECT>    # Change directory to the new project
+  vercel          # Deploy to the cloud
 
 
 ## 参考

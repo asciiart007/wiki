@@ -18,8 +18,8 @@ permissions:
 # 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
 concurrency:
     group: pages
-  # 取消首个工作流的运行，这样在并发时就只会运行最新的
-  cancel-in-progress: true
+    # 取消首个工作流的运行，这样在并发时就只会运行最新的
+    cancel-in-progress: true
 
 jobs:
     # 构建工作
