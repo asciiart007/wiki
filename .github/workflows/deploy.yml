@@ -31,6 +31,16 @@ jobs:
               with:
                   fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
                   # path: wiki
+
+            - name: 切换到 wiki 目录
+              run: |
+                cd wiki
+            - name: Check for package.json
+              run: |
+                if [ ! -f "wiki/package.json" ]; then
+                  echo "package.json not found"
+                  exit 1
+                fi
             - name: 安装 PNPM
               uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
                 # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
@@ -41,9 +51,6 @@ jobs:
                   cache: pnpm # 或 pnpm / yarn
             - name: Setup Pages
               uses: actions/configure-pages@v4
-
-            # - name: 切换到 wiki 目录
-            #   run: cd wiki  # 切换到 wiki 目录
             - name: Install dependencies
               run: pnpm install # npm ci 或 pnpm install / yarn install / bun install
             - name: Build with VitePress
