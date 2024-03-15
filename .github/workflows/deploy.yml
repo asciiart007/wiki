@@ -26,12 +26,12 @@ jobs:
       # - name: 切换到 wiki 目录
       #   run: |
       #     cd wiki
-      - name: Check for package.json
-        run: |
-          if [ ! -f "package.json" ]; then
-            echo "package.json not found"
-            exit 1
-          fi
+      # - name: Check for package.json
+      #   run: |
+      #     if [ ! -f "package.json" ]; then
+      #       echo "package.json not found"
+      #       exit 1
+      #     fi
       - name: 安装 PNPM
         uses: pnpm/action-setup@v3
       - name: Setup Node
