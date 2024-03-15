@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
       - name: Print working directory
         run: |
-            echo "$(pwd)"
+          echo "$(pwd)"
       - name: Check for package.json
         run: |
           if [ ! -f "package.json" ]; then
@@ -31,8 +31,8 @@ jobs:
           fi
       - name: 安装 PNPM
         uses: pnpm/action-setup@v3
-          with:
-            version: 8
+        with:
+          version: 8
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
