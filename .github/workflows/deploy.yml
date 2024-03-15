@@ -22,7 +22,9 @@ jobs:
           fetch-depth: 0
           path: wiki
       - name: Print working directory
-        run: echo  $(pwd)
+        run: |
+            echo "$(pwd)"
+            ls -l package.json # 确认文件存在
       # - name: 切换到 wiki 目录
       #   run: |
       #     cd wiki
